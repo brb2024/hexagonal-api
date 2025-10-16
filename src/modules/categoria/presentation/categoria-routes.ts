@@ -8,5 +8,7 @@ const categoriaRouter = Router();
 categoriaRouter.post("/crear", categoriaController.crear.bind(categoriaController));
 // get /categoria/listar
 categoriaRouter.get("/listar", categoriaController.listar.bind(categoriaController));
+// post /categoria/obtener
+categoriaRouter.post("/obtener", categoriaController.obtenerPorId.bind(categoriaController));
 
 export { categoriaRouter };

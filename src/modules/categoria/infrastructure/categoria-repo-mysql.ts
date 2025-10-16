@@ -33,4 +33,19 @@ export class CategoriaRepoMysql implements CategoriaRepository {
       throw new Error("No se pudo listar las categorias.");
     }
   }
+
+  // Metodo para obtener categorias por id
+  async obtenerPorId(id: number): Promise<Categoria | null> {
+    try {
+      const [resultado] = await pool.execute("SELECT * FROM categorias WHERE id = ?", [id]);
+      const categoria = resultado as Categoria[];
+
+      console.log(categoria);
+
+      return categoria[0] ?? null;
+    } catch (error) {
+      // console.log(error);
+      throw new Error("No se pudo listar las categorias.");
+    }
+  }
 }

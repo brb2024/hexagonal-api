@@ -1,11 +1,10 @@
 import { Categoria } from "../domain/model/categoria";
 import { CategoriaRepository } from "../domain/repository/categoria-repository";
 
-// Caso de uso para listar categorias
-export class ListarCategorias {
+export class ObtenerCategoriaPorId {
   constructor(private readonly categoriaRepo: CategoriaRepository) {}
-  
-    async ejecutar(): Promise<Categoria[]> {
-      return await this.categoriaRepo.listar();
-    }
+
+  async ejecutar(id: number): Promise<Categoria | null> {
+    return await this.categoriaRepo.obtenerPorId(id);
+  }
 }

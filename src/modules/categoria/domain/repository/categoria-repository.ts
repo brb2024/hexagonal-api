@@ -6,4 +6,6 @@ export interface CategoriaRepository {
   crear(categoria: Omit<Categoria, "id">): Promise<Categoria>;
   // Listar categorias
   listar(): Promise<Categoria[]>;
+  // Obtener categoria por id
+  obtenerPorId(id: number): Promise<Categoria | null>;
 }

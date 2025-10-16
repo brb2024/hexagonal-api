@@ -19,7 +19,7 @@ Antes de empezar, asegúrate de tener instalado:
 
 Clonar el repo
 ```bash
-git clone https://github.com/tuusuario/tu-repo.git
+git clone https://github.com/brb2024/hexagonal-api.git
 ```
 
 ## Instalar dependencias
